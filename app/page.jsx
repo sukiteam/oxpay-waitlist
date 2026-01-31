@@ -6,7 +6,7 @@ export default function Page() {
   const [email, setEmail] = useState('')
   const [done, setDone] = useState(false)
 
-  function submit(e: React.FormEvent) {
+  function submit(e) {
     e.preventDefault()
     setDone(true)
     setEmail('')
@@ -65,7 +65,7 @@ export default function Page() {
   )
 }
 
-const styles: Record<string, React.CSSProperties> = {
+const styles = {
   main: {
     minHeight: '100vh',
     background: '#05070D',
@@ -75,7 +75,7 @@ const styles: Record<string, React.CSSProperties> = {
     justifyContent: 'center',
     padding: '64px 24px',
     position: 'relative',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   glow1: {
     position: 'absolute',
@@ -86,7 +86,7 @@ const styles: Record<string, React.CSSProperties> = {
     height: '320px',
     background: 'rgba(123,97,255,0.20)',
     filter: 'blur(60px)',
-    borderRadius: '999px'
+    borderRadius: '999px',
   },
   glow2: {
     position: 'absolute',
@@ -96,7 +96,7 @@ const styles: Record<string, React.CSSProperties> = {
     height: '320px',
     background: 'rgba(79,209,197,0.15)',
     filter: 'blur(60px)',
-    borderRadius: '999px'
+    borderRadius: '999px',
   },
   card: {
     width: '100%',
@@ -107,14 +107,14 @@ const styles: Record<string, React.CSSProperties> = {
     backdropFilter: 'blur(14px)',
     padding: '42px',
     boxShadow: '0 0 70px rgba(0,0,0,0.55)',
-    position: 'relative'
+    position: 'relative',
   },
   brand: { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' },
   logo: {
     width: '40px',
     height: '40px',
     borderRadius: '16px',
-    background: 'linear-gradient(135deg,#7B61FF 0%,#4FD1C5 100%)'
+    background: 'linear-gradient(135deg,#7B61FF 0%,#4FD1C5 100%)',
   },
   brandText: { fontSize: '18px', fontWeight: 600, letterSpacing: '0.5px' },
   h1: { textAlign: 'center', marginTop: '28px', fontSize: '52px', lineHeight: 1.05, fontWeight: 600 },
@@ -126,7 +126,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: '14px',
     border: '1px solid rgba(255,255,255,0.10)',
     background: 'rgba(0,0,0,0.20)',
-    color: 'rgba(255,255,255,0.80)'
+    color: 'rgba(255,255,255,0.80)',
   },
   form: { marginTop: '36px', display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' },
   input: {
@@ -138,7 +138,7 @@ const styles: Record<string, React.CSSProperties> = {
     border: '1px solid rgba(255,255,255,0.10)',
     padding: '0 14px',
     color: '#fff',
-    outline: 'none'
+    outline: 'none',
   },
   button: {
     height: '52px',
@@ -149,7 +149,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontWeight: 600,
     letterSpacing: '0.4px',
     cursor: 'pointer',
-    background: 'linear-gradient(135deg,#7B61FF 0%,#4FD1C5 100%)'
+    background: 'linear-gradient(135deg,#7B61FF 0%,#4FD1C5 100%)',
   },
   success: {
     marginTop: '36px',
@@ -158,10 +158,10 @@ const styles: Record<string, React.CSSProperties> = {
     textAlign: 'center',
     border: '1px solid rgba(255,255,255,0.10)',
     background: 'rgba(0,0,0,0.25)',
-    color: '#A7F3D0'
+    color: '#A7F3D0',
   },
   footer: { marginTop: '30px', textAlign: 'center' },
   launch: { fontSize: '14px', color: 'rgba(255,255,255,0.60)' },
   bold: { color: 'rgba(255,255,255,0.85)' },
-  trust: { marginTop: '8px', fontSize: '12px', color: 'rgba(255,255,255,0.45)' }
+  trust: { marginTop: '8px', fontSize: '12px', color: 'rgba(255,255,255,0.45)' },
 }
